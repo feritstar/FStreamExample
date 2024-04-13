@@ -38,6 +38,21 @@ int main()
 		file.close();
 	}
 
+	file.open("D:\\c++\\examples\\FStreamExample\\input.txt", ios::in | ios::binary);
+
+	if (!file.is_open())
+	{
+		cout << "File access is denied! Try again." << endl;
+	}
+	else
+	{
+		string str = "";
+		while (getline(file, str))
+		{
+			cout << str << endl;
+		}		
+		file.close();
+	}
 
 	cout << endl;
 	return 0;
